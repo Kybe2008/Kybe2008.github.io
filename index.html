@@ -2,84 +2,117 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>林国 (Kybe) | 个人主页</title>
+<!-- ① 博客名称与网页标题 -->
+<title>林国 (Kybe) 的技术博客 | 记录计算机探索与成长</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f8fafc;color:#0f172a;line-height:1.7;padding:40px 20px 60px}
 .container{max-width:760px;margin:0 auto}
-.card{background:#fff;border-radius:18px;padding:32px 28px;box-shadow:0 8px 24px rgba(0,0,0,0.04);border:1px solid #e2e8f0;margin-bottom:22px}
+.card{background:#fff;border-radius:18px;padding:30px 28px;box-shadow:0 8px 24px rgba(0,0,0,0.04);border:1px solid #e2e8f0;margin-bottom:22px}
 .avatar{width:86px;height:86px;border-radius:50%;background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:bold;margin:0 auto 16px;box-shadow:0 6px 16px rgba(37,99,235,0.25)}
-h1{font-size:1.8rem;text-align:center;font-weight:800}
-.badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:10px 0 16px}
+h1{font-size:1.8rem;text-align:center;font-weight:800;color:#0f172a}
+.site-subtitle{text-align:center;color:#64748b;font-size:0.95rem;margin-top:4px}
+.badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
 .badge{background:#eff6ff;color:#2563eb;font-size:0.82rem;font-weight:600;padding:3px 12px;border-radius:14px;border:1px solid #dbeafe}
 .motto{background:#f1f5f9;border-left:4px solid #3b82f6;padding:12px 16px;border-radius:6px;margin:16px auto 20px;max-width:480px;font-weight:600;color:#1e293b;text-align:center;font-style:italic}
 .btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .btn{padding:9px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.9rem;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .btn-blue{background:#2563eb;color:#fff}
 .btn-gray{background:#f1f5f9;color:#334155;border:1px solid #e2e8f0}
-.sec-title{font-size:1.15rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.timeline{position:relative;padding-left:22px;border-left:2px solid #cbd5e1;margin-left:8px}
-.t-item{position:relative;margin-bottom:18px}
-.t-dot{position:absolute;left:-28px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid #2563eb}
-.t-date{font-size:0.82rem;font-weight:700;color:#2563eb}
+.sec-title{font-size:1.2rem;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:8px;color:#1e293b}
+
+/* 博客文章列表专用样式 */
+.article-item{padding:20px 0;border-bottom:1px solid #f1f5f9}
+.article-item:first-child{padding-top:0}
+.article-item:last-child{border-bottom:none;padding-bottom:0}
+.article-meta{display:flex;align-items:center;gap:12px;font-size:0.82rem;color:#64748b;margin-bottom:8px}
+.article-tag{background:#f1f5f9;color:#475569;padding:2px 8px;border-radius:6px;font-weight:600}
+.article-title{font-size:1.15rem;font-weight:700;margin-bottom:8px;line-height:1.4}
+.article-title a{color:#0f172a;text-decoration:none;transition:color 0.2s}
+.article-title a:hover{color:#2563eb}
+.article-summary{font-size:0.92rem;color:#475569;line-height:1.6;margin-bottom:12px}
+.article-entry-btn{display:inline-flex;align-items:center;gap:4px;color:#2563eb;font-weight:600;font-size:0.88rem;text-decoration:none}
+.article-entry-btn:hover{text-decoration:underline}
+
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tag{background:#f8fafc;border:1px solid #e2e8f0;padding:6px 14px;border-radius:10px;font-size:0.86rem;font-weight:600;color:#334155}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:18px}
 footer{text-align:center;color:#64748b;font-size:0.85rem;margin-top:30px}
 </style>
 </head>
 <body>
 <div class="container">
+
+  <!-- ① 博客名称 + ② 个人介绍卡片 -->
   <div class="card" style="text-align:center;">
     <div class="avatar">林</div>
-    <h1>林国 (Kybe) 👋</h1>
+    <h1>林国 (Kybe) 的技术博客</h1>
+    <p class="site-subtitle">🚀 计算机专业大学生的极客成长空间与技术随笔</p>
     <div class="badges">
       <span class="badge">📍 中国 · 武汉</span>
       <span class="badge">🎓 中南民族大学</span>
-      <span class="badge">💻 计算机专业 · 2026级大一</span>
+      <span class="badge">💻 计算机专业 · 2026级</span>
     </div>
     <div class="motto">“ 第二名意味着你是头号输家 ”</div>
     <div class="btns">
       <a href="https://github.com/Kybe2008" class="btn btn-blue" target="_blank">🐙 GitHub 主页</a>
-      <button class="btn btn-gray" onclick="alert('QQ号：3082194992')">🐧 QQ: 3082194992</button>
+      <button class="btn btn-gray" onclick="alert('QQ号：3082194992')">🐧 联系 QQ: 3082194992</button>
     </div>
   </div>
 
+  <!-- ③ 文章列表专区 -->
   <div class="card">
-    <div class="sec-title">⏳ 经历与旅程</div>
-    <div class="timeline">
-      <div class="t-item"><div class="t-dot"></div><div class="t-date">2026 年 9 月</div><div><strong>入学中南民族大学（计算机科学学院）</strong><br>正式开启大学生活与系统的计算机探索之旅。</div></div>
-      <div class="t-item"><div class="t-dot"></div><div class="t-date">2026 年</div><div><strong>搭建首个个人网站 & 开源空间</strong><br>记录学习笔记与代码心得，持续构建个人技术作品集。</div></div>
-      <div class="t-item" style="margin-bottom:0;"><div class="t-dot"></div><div class="t-date">未来进行时 🚀</div><div>深耕算法、数据结构与 Web 开发，追求卓越，持续突破。</div></div>
+    <div class="sec-title">📝 最新博文 / Articles</div>
+    
+    <!-- 文章 1 -->
+    <div class="article-item">
+      <div class="article-meta">
+        <!-- ④ 发布日期 -->
+        <span>📅 2026-09-08</span>
+        <span class="article-tag">开发环境</span>
+      </div>
+      <!-- ⑥ 文章入口链接 -->
+      <h3 class="article-title">
+        <a href="posts/cpp-env-setup.html">从零搭建 VS Code + C++ (MinGW-w64) 与 Git 编译环境实战复盘</a>
+      </h3>
+      <!-- ⑤ 摘要 -->
+      <p class="article-summary">
+        详细复盘在 Windows 操作系统下将开发工具链全部定向部署至 D 盘的过程。深入剖析 PATH 环境变量索引机理、终端乱码成因与解决方案，以及如何通过 g++ 命令行实现脱稿静态编译与运行...
+      </p>
+      <!-- ⑥ 文章入口按钮 -->
+      <a class="article-entry-btn" href="posts/cpp-env-setup.html">阅读全文 ➔</a>
     </div>
+
+    <!-- 文章 2 -->
+    <div class="article-item">
+      <div class="article-meta">
+        <!-- ④ 发布日期 -->
+        <span>📅 2026-09-09</span>
+        <span class="article-tag">算法竞赛</span>
+      </div>
+      <!-- ⑥ 文章入口链接 -->
+      <h3 class="article-title">
+        <a href="posts/luogu-p1001.html">洛谷算法打卡初体验：P1001 A+B Problem 解题与判题机制揭秘</a>
+      </h3>
+      <!-- ⑤ 摘要 -->
+      <p class="article-summary">
+        记录在洛谷 OJ 平台拿下人生第一个绿色 AC 的全流程。全面解析标准输入输出流（std::cin / std::cout）的数据流向原理、变量内存机制，并揭开为何在线判题系统绝不能包含多余交互提示语的底层逻辑...
+      </p>
+      <!-- ⑥ 文章入口按钮 -->
+      <a class="article-entry-btn" href="posts/luogu-p1001.html">阅读全文 ➔</a>
+    </div>
+
   </div>
 
+  <!-- 技能栈卡片 -->
   <div class="card">
-    <div class="sec-title">🛠️ 技术与学习中</div>
+    <div class="sec-title">🛠️ 技术雷达与技术栈</div>
     <div class="tags">
-      <span class="tag">💻 C / C++ 基础</span><span class="tag">🐍 Python</span><span class="tag">🌐 HTML5 & 现代 CSS</span><span class="tag">⚡ JavaScript</span><span class="tag">🐙 Git & GitHub</span><span class="tag">📊 数据结构与算法</span><span class="tag">🐧 Linux 基础</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="sec-title">🎨 生活与精神角落</div>
-    <div class="grid">
-      <div class="box">
-        <div style="font-weight:700;margin-bottom:8px;">🎵 音乐与单曲循环</div>
-        <div style="background:#fff;padding:8px 12px;border-radius:8px;border:1px solid #e2e8f0;margin-bottom:8px;"><strong>《我不难过》</strong> - 孙燕姿</div>
-        <div style="font-size:0.82rem;color:#64748b;">常听歌手：周杰伦、陈奕迅、孙燕姿</div>
-      </div>
-      <div class="box">
-        <div style="font-weight:700;margin-bottom:8px;">📖 阅读与思考</div>
-        <div style="font-size:0.9rem;color:#1e293b;margin-bottom:6px;"><strong>《我与地坛》</strong> - 史铁生</div>
-        <div style="background:#fff;border-left:3px solid #10b981;padding:8px 10px;font-size:0.82rem;color:#475569;">“一个人，出生了，这就不再是一个可以辩论的问题，只是上帝交给他的一个事实。”</div>
-      </div>
+      <span class="tag">💻 C / C++ 20</span><span class="tag">🐍 Python</span><span class="tag">🌐 HTML5 & CSS3</span><span class="tag">🐙 Git & GitHub</span><span class="tag">📊 算法与数据结构</span><span class="tag">🐧 Linux 基础</span>
     </div>
   </div>
 
   <footer>
-    <p>© 2026 林国 (Kybe) · 中南民族大学 计算机专业</p>
+    <p>© 2026 林国 (Kybe) · 中南民族大学 计算机专业 · 保留所有权利</p>
   </footer>
 </div>
 </body>

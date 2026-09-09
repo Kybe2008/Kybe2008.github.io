@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>洛谷算法打卡初体验：P1001 A+B Problem 解题与判题机制揭秘 | 林国</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f8fafc;color:#0f172a;line-height:1.8;padding:40px 20px}
+.container{max-width:760px;margin:0 auto;background:#fff;border-radius:18px;padding:36px;border:1px solid #e2e8f0;box-shadow:0 8px 24px rgba(0,0,0,0.04)}
+.back-link{display:inline-block;margin-bottom:20px;color:#2563eb;text-decoration:none;font-weight:600}
+h1{font-size:1.8rem;line-height:1.4;margin-bottom:12px;color:#0f172a}
+.meta{font-size:0.85rem;color:#64748b;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid #f1f5f9}
+h2{font-size:1.3rem;margin:28px 0 14px;color:#1e293b}
+code{background:#f1f5f9;padding:2px 6px;border-radius:4px;color:#d97706;font-family:Consolas,monospace}
+pre{background:#0f172a;color:#f8fafc;padding:16px;border-radius:10px;overflow-x:auto;margin:16px 0}
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="back-link" href="../index.html">← 返回博客首页</a>
+  <h1>洛谷算法打卡初体验：P1001 A+B Problem 解题与判题机制揭秘</h1>
+  <div class="meta">作者：林国 (Kybe) · 发布时间：2026-09-09 · 标签：算法竞赛, 洛谷</div>
+  <p>今天在洛谷 Online Judge 平台上顺利拿下了人生中第一个全绿 AC。看似简单的加法题，背后蕴含了计算机输入输出的深层机理。</p>
+  <h2>一、 核心源码实现</h2>
+  <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int a, b;
+    std::cin &gt;&gt; a &gt;&gt; b;
+    std::cout &lt;&lt; a + b &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
+  <h2>二、 判题机原则</h2>
+  <p>OJ 评测机采用严格的标准输出字符比对，任何多余的提示符（如“请输入数字”）都会导致判题失败。坚持规范代码习惯至关重要！</p>
+</div>
+</body>
+</html>

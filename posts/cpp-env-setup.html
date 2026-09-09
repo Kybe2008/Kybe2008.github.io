@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>从零搭建 VS Code + C++ 与 Git 编译环境实战复盘 | 林国</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f8fafc;color:#0f172a;line-height:1.8;padding:40px 20px}
+.container{max-width:760px;margin:0 auto;background:#fff;border-radius:18px;padding:36px;border:1px solid #e2e8f0;box-shadow:0 8px 24px rgba(0,0,0,0.04)}
+.back-link{display:inline-block;margin-bottom:20px;color:#2563eb;text-decoration:none;font-weight:600}
+h1{font-size:1.8rem;line-height:1.4;margin-bottom:12px;color:#0f172a}
+.meta{font-size:0.85rem;color:#64748b;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid #f1f5f9}
+h2{font-size:1.3rem;margin:28px 0 14px;color:#1e293b}
+code{background:#f1f5f9;padding:2px 6px;border-radius:4px;color:#d97706;font-family:Consolas,monospace}
+pre{background:#0f172a;color:#f8fafc;padding:16px;border-radius:10px;overflow-x:auto;margin:16px 0}
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="back-link" href="../index.html">← 返回博客首页</a>
+  <h1>从零搭建 VS Code + C++ (MinGW-w64) 与 Git 编译环境实战复盘</h1>
+  <div class="meta">作者：林国 (Kybe) · 发布时间：2026-09-08 · 标签：开发环境, C++</div>
+  <p>在进行计算机科学学习的第一天，搭建一个属于自己、干净规范的本地开发环境是最重要的基石。本文复盘全套工具链在 D 盘部署的全过程。</p>
+  <h2>一、 统一文件架构 (D 盘规范分类)</h2>
+  <p>为了避免占用系统 C 盘空间并规避空格路径问题，所有开发工具统一归类部署于 <code>D:\DevTools</code>，工程项目位于 <code>D:\Workspace</code>。</p>
+  <h2>二、 核心编译命令</h2>
+  <pre><code># 使用 g++ 现代 C++20 静态编译
+g++ -std=c++20 -static hello.cpp -o hello.exe
+# 运行程序
+.\hello.exe</code></pre>
+  <p>通过本次搭建，深刻理解了 PATH 环境变量的本质，迈出了程序员独立开发的第一步！</p>
+</div>
+</body>
+</html>
