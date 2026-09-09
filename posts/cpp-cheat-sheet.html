@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C++ 小白做题速查宝典 | 林国 (Kybe)</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.8;
+  padding: 30px 16px 60px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-bottom: 20px;
+  border: 1px solid #dbeafe;
+}
+.back-btn:hover { background: #dbeafe; }
+h1 {
+  font-size: 1.7rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+  line-height: 1.35;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 10px;
+}
+.meta-info {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+.tip-box {
+  background: #eff6ff;
+  border-left: 5px solid #3b82f6;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  font-size: 0.92rem;
+  color: #1e3a8a;
+  line-height: 1.6;
+}
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 8px;
+}
+h3 {
+  font-size: 1.05rem;
+  color: #334155;
+  margin: 18px 0 8px;
+}
+p { margin-bottom: 10px; font-size: 0.95rem; }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 14px 0;
+  -webkit-overflow-scrolling: touch;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+  background: #fff;
+}
+th, td {
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  font-size: 0.88rem;
+}
+th { background: #f1f5f9; font-weight: 700; color: #1e293b; }
+code {
+  background: #f1f5f9;
+  color: #d97706;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+  font-size: 0.9em;
+}
+pre {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 14px 16px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 12px 0;
+  font-family: Consolas, monospace;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  -webkit-overflow-scrolling: touch;
+}
+ul, ol { padding-left: 20px; margin: 10px 0; font-size: 0.93rem; }
+li { margin-bottom: 6px; }
+.danger-box {
+  background: #fef2f2;
+  border-left: 5px solid #ef4444;
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin: 12px 0;
+  color: #991b1b;
+  font-size: 0.9rem;
+}
+@media (max-width: 600px) {
+  body { padding: 20px 12px 50px; }
+  h1 { font-size: 1.45rem; }
+  .card { padding: 18px 14px; }
+}
+</style>
+</head>
+<body>
+
+<a class="back-btn" href="../index.html">← 返回博客首页</a>
+
+<h1>📘 C++ 小白做题速查宝典</h1>
+<div class="meta-info">整理：林国 (Kybe) · 适用：洛谷新手入门 · 随时开卷查阅</div>
+
+<div class="tip-box">
+  <strong>🌟 手机随身口诀：</strong><br>
+  刚学编程记不住模板完全正常！做题时手机横屏或竖屏放在桌边，当字典随时看。照着写上 10 道题，手指自然形成肌肉记忆！
+</div>
+
+<div class="card">
+  <h2>模块一：万能起手式（任何题目的固定骨架）</h2>
+  <p>新建 <code>.cpp</code> 文件后，<strong>二话不说先把这个骨架抄上去，所有解题逻辑全写在大括号里</strong>：</p>
+  <pre><code>#include &lt;iostream&gt;
+using namespace std;   // 加上这句，省去每次写 std::
+
+int main() {
+    // 👉 你的所有解题代码全写在这里！
+    
+    return 0;
+}</code></pre>
+  <h3>逐行原理大白话：</h3>
+  <ul>
+    <li><code>#include &lt;iostream&gt;</code>：向系统借调专门管屏幕打印和键盘输入的工具箱。</li>
+    <li><code>using namespace std;</code>：默认在官方标准库里找东西，允许直接写 <code>cin</code> 和 <code>cout</code>。</li>
+    <li><code>int main() { ... }</code>：程序的<strong>唯一大门</strong>，电脑从这里作为第一行起跑。</li>
+    <li><code>return 0;</code>：程序执行完毕，向系统交卷汇报：“状态码 0，一切正常无报错！”</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>模块二：数据抽屉（变量类型）</h2>
+  <p>根据题目要装什么数据，挑对应的单词建抽屉：</p>
+  <div class="table-wrapper">
+    <table>
+      <tr><th>类型</th><th>关键字</th><th>装什么？</th><th>范围与特点</th><th>例子</th></tr>
+      <tr><td><strong>整数</strong></td><td><code>int</code></td><td>正数、负数、0</td><td>约正负 21 亿，最常用</td><td><code>int a = 10;</code></td></tr>
+      <tr><td><strong>超大整数</strong></td><td><code>long long</code></td><td>超 20 亿大数</td><td>高达 ±9×10<sup>18</sup>，大数相乘必备</td><td><code>long long n;</code></td></tr>
+      <tr><td><strong>小数</strong></td><td><code>double</code></td><td>带小数点的数</td><td>精度高，算平均数必备</td><td><code>double pi = 3.14;</code></td></tr>
+      <tr><td><strong>字符</strong></td><td><code>char</code></td><td>单个字母符号</td><td>必须用<strong>单引号</strong>包裹</td><td><code>char c = 'A';</code></td></tr>
+      <tr><td><strong>字符串</strong></td><td><code>string</code></td><td>一串文字名字</td><td>必须用<strong>双引号</strong>包裹</td><td><code>string s = "Kybe";</code></td></tr>
+      <tr><td><strong>布尔</strong></td><td><code>bool</code></td><td>对与错</td><td><code>true</code> (1) 或 <code>false</code> (0)</td><td><code>bool ok = true;</code></td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <h2>模块三：耳朵与嘴巴（输入输出）</h2>
+  <h3>1. 读入数据（从键盘灌进抽屉）</h3>
+  <pre><code>int a, b;
+cin &gt;&gt; a;          // 读一个数放进 a
+cin &gt;&gt; a &gt;&gt; b;     // 连续读入两个数（空格或回车隔开都行）</code></pre>
+  <p><strong>箭头记法</strong>：<code>&gt;&gt;</code> 漏斗朝右，数据从左边键盘<strong>流进</strong>右边抽屉。</p>
+
+  <h3>2. 屏幕输出（把结果吐到屏幕）</h3>
+  <pre><code>cout &lt;&lt; a;                     // 打印变量 a 的值
+cout &lt;&lt; a + b;                 // 算完后直接把和打印出来
+cout &lt;&lt; a &lt;&lt; endl;             // 打印并换行（endl = end line）
+cout &lt;&lt; a &lt;&lt; " " &lt;&lt; b &lt;&lt; endl; // 两个数字中间空一格输出</code></pre>
+  <p><strong>箭头记法</strong>：<code>&lt;&lt;</code> 传送带朝左，把右边内容<strong>推送到</strong>左边屏幕。</p>
+
+  <h3>3. 保留两位小数标准模板：</h3>
+  <pre><code>#include &lt;iostream&gt;
+#include &lt;iomanip&gt; // 👉 必须包含格式控制工具箱
+using namespace std;
+
+int main() {
+    double x = 3.1415926;
+    cout &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; x &lt;&lt; endl; // 输出：3.14
+    return 0;
+}</code></pre>
+</div>
+
+<div class="card">
+  <h2>模块四：符号字典（运算与判断）</h2>
+  <h3>1. 四则运算</h3>
+  <ul>
+    <li>加减乘：<code>+</code>、<code>-</code>、<code>*</code></li>
+    <li><strong>除法 <code>/</code>（新手最大天坑）</strong>：两个整数相除 <code>5 / 2</code> 结果是 <strong>2</strong>（小数会被切掉！）；必须写成 <code>5.0 / 2</code> 结果才是 <strong>2.5</strong>。</li>
+    <li><strong>求余数 <code>%</code></strong>：<code>7 % 3</code> 结果是 <code>1</code>。常用于判断偶数：<code>if (x % 2 == 0)</code>。</li>
+  </ul>
+
+  <h3>2. 比较符号</h3>
+  <ul>
+    <li><code>&gt;</code>、<code>&lt;</code>、<code>&gt;=</code>、<code>&lt;=</code>、<code>!=</code>（不等于）</li>
+    <li><strong><code>==</code>（新手最容易错！）</strong>：一个等号 <code>=</code> 是赋值（塞入东西）；两个等号 <code>==</code> 才是判断相等！</li>
+  </ul>
+
+  <h3>3. 逻辑连接符</h3>
+  <ul>
+    <li><strong>并且 <code>&&</code></strong>：两边都必须满足（如 <code>score &gt;= 60 && score &lt; 90</code>）。</li>
+    <li><strong>或者 <code>||</code></strong>：只要一个满足就行（如 <code>year % 400 == 0 || year % 4 == 0</code>）。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>模块五：做选择（分支结构 if - else）</h2>
+  <pre><code>if (score &gt;= 90) {
+    cout &lt;&lt; "优秀" &lt;&lt; endl;
+} else if (score &gt;= 60) {
+    cout &lt;&lt; "及格" &lt;&lt; endl;
+} else {
+    cout &lt;&lt; "不及格" &lt;&lt; endl;
+}</code></pre>
+</div>
+
+<div class="card">
+  <h2>模块六：重复劳动（循环结构 for 与 while）</h2>
+  <h3>1. <code>for</code> 循环（明确知道跑几圈，做 N 次）</h3>
+  <pre><code>// 结构：for (起跑点; 终点线; 计数器自增)
+int n;
+cin &gt;&gt; n;
+int sum = 0; // 重点：求和变量必须先清零！
+for (int i = 1; i &lt;= n; i++) {
+    sum = sum + i;
+}
+cout &lt;&lt; sum &lt;&lt; endl;</code></pre>
+
+  <h3>2. <code>while</code> 循环（条件满足就一直跑）</h3>
+  <pre><code>int n = 12345;
+int count = 0;
+while (n &gt; 0) {
+    n = n / 10; // 砍掉末尾数字
+    count++;    // 位数加 1
+}
+cout &lt;&lt; count &lt;&lt; endl;</code></pre>
+</div>
+
+<div class="card">
+  <h2>模块七：洛谷 OJ 判题机制与避坑保命指南</h2>
+  <ul>
+    <li>🟢 <strong><code>AC</code> (Accepted - 绿色)</strong>：<strong>满分通过！</strong></li>
+    <li>🔴 <strong><code>WA</code> (Wrong Answer - 红色)</strong>：<strong>答案错误</strong>。检查算出的数字是否跟样例一致。</li>
+    <li>🟡 <strong><code>CE</code> (Compile Error - 黄色)</strong>：<strong>编译错误</strong>。漏了分号、拼错单词，看具体报错行。</li>
+    <li>🟣 <strong><code>TLE</code> (Time Limit Exceeded - 紫色)</strong>：<strong>超时</strong>。死循环了。</li>
+  </ul>
+  <div class="danger-box">
+    <strong>三大保命铁律：</strong>
+    <ol>
+      <li><strong>绝对不要写多余人机提示</strong>：绝不能写 <code>cout &lt;&lt; "请输入数字:";</code>，判题机会直接判 WA！</li>
+      <li><strong>每行语句末尾必须带英文分号 <code>;</code></strong>。</li>
+      <li><strong>累加求和变量必须初始赋 0</strong>：<code>int sum = 0;</code>，否则里面装的是电脑内存垃圾值！</li>
+    </ol>
+  </div>
+</div>
+
+</body>
+</html>
