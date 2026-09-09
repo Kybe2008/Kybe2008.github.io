@@ -1,0 +1,284 @@
+/* ====================================================
+   1. 基础全局样式
+   ==================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.7;
+  padding: 40px 20px 60px;
+}
+
+/* 主容器：限制在大屏幕下的最大宽度，保持优雅居中 */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 卡片通用组件 */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* 头像与个人介绍 */
+.avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: bold;
+  margin: 0 auto 16px;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.site-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 14px 0 16px;
+}
+
+.badge {
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 14px;
+  border: 1px solid #dbeafe;
+}
+
+.motto {
+  background: #f1f5f9;
+  border-left: 4px solid #3b82f6;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin: 16px auto 20px;
+  max-width: 480px;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+  font-style: italic;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-blue {
+  background: #2563eb;
+  color: #ffffff;
+}
+.btn-blue:hover {
+  background: #1d4ed8;
+}
+
+.btn-gray {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+.btn-gray:hover {
+  background: #e2e8f0;
+}
+
+.sec-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e293b;
+}
+
+/* ====================================================
+   2. 博客文章列表专用样式
+   ==================================================== */
+.article-item {
+  padding: 22px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.article-item:first-child {
+  padding-top: 0;
+}
+
+.article-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.article-tag {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.article-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.article-title a {
+  color: #0f172a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.article-title a:hover {
+  color: #2563eb;
+}
+
+.article-summary {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.article-entry-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
+.article-entry-btn:hover {
+  text-decoration: underline;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+footer {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: 30px;
+}
+
+/* ====================================================
+   3. 核心：移动端响应式布局适配 (@media 查询)
+   当屏幕宽度小于 640px（手机屏幕）时自动生效
+   ==================================================== */
+@media (max-width: 640px) {
+  body {
+    padding: 16px 12px 30px; /* 缩减手机两边内边距，留出更多显示空间 */
+  }
+
+  .card {
+    padding: 20px 16px; /* 卡片内边距收窄 */
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 1.45rem; /* 标题字号适度缩小，防止手机单行换行断开 */
+  }
+
+  .site-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .btns {
+    flex-direction: column; /* 手机上两个按钮上下排列，更容易手指触按 */
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center; /* 按钮在手机端通栏全宽居中 */
+  }
+
+  .article-title {
+    font-size: 1.05rem;
+  }
+
+  .article-summary {
+    font-size: 0.88rem;
+  }
+}
